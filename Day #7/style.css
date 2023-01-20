@@ -1,0 +1,252 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: #1f2322;
+	color: #333;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 300px;
+	width: 300px;
+	background: #fff;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+	z-index: 2;
+	transition: all 0.5s ease-in-out;
+}
+
+.header {
+	height: 60px;
+	width: 100%;
+	background-color: #575b4e;
+}
+
+.menuIcon {
+	position: absolute;
+	width: 25px;
+	height: 15px;
+	cursor: pointer;
+	top: 23px;
+	left: 20px;
+	z-index: 1;
+}
+
+.dashOne {
+	position: absolute;
+	width: 18px;
+	height: 3px;
+	background: #a9b39c;
+	border-radius: 3px;
+	transition: all 0.2s ease-in-out;
+}
+
+.dashTwo {
+	position: absolute;
+	width: 25px;
+	height: 3px;
+	background: #a9b39c;
+	border-radius: 3px;
+	transition: all 0.2s ease-in-out;
+	bottom: 0px;
+}
+
+.circle {
+	position: absolute;
+	height: 5px;
+	width: 5px;
+	border-radius: 5px;
+	top: -1px;
+	right: 0px;
+	background: #a9b39c;
+	transition: all 0.2s ease-in-out;
+}
+
+.menuIcon:hover .dashOne, .menuIcon:hover .dashTwo, .menuIcon:hover .circle{
+	 background: #1f2322;
+}
+
+.title {
+	display: block;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 16px;
+	position: absolute;
+	width: 100%;
+	margin: 0 auto;
+	top: 0;
+}
+
+.search-icon {
+	position: absolute;
+	z-index: 2;
+	font-size: 21px !important;
+	color: #a9b39c;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	top: 20px;
+	right: 20px;
+}
+
+.search-icon:hover {
+	color: #1f2322;
+}
+
+.search-input {
+	box-sizing: border-box;
+	position: absolute;
+	top: 13px;
+	right: 55px;
+	width: 230px;
+	height: 34px;
+	border-radius: 17px;
+	border: none;
+	background: #fff;
+	padding: 0 17px;
+	font-size: 13px;
+	color: #666;
+	transition: all 0.3s ease-in-out;
+	transform: translateX(15px);
+	opacity: 0;
+	pointer-events: none;
+	z-index: 5;
+}
+
+.search-input.active {
+	transform: translateX(0);
+	opacity: 1;
+	pointer-events: all;
+}
+
+.notifications {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+
+.line {
+	width: 3px;
+	background: #a9b39c;
+	position: absolute;
+	left: 20px;
+	top: 0;
+	bottom: 0;
+}
+
+.notification {
+	position: relative;
+	margin: 25px 20px 25px 43px;
+	animation: here-am-i 0.5s ease-out 0.8s;
+	animation-fill-mode: both;
+}
+
+.notification:hover {
+	cursor: pointer;
+	color: #1f2322;
+}
+
+.circleNotification {
+	box-sizing: border-box;
+	position: absolute;
+	height: 11px;
+	width: 11px;
+	background: #fff;
+	border: 2px solid #a9b39c;;
+	box-shadow: 0 0 0 3px #fff;
+	border-radius: 6px;
+	top: 0;
+	left: -27px;
+}
+
+.time {
+	display: block;
+	font-size: 11px;
+	line-height: 11px;
+	margin-bottom: 2px;
+}
+
+p {
+	font-size: 15px;
+	line-height: 20px;
+	margin: 0;
+}
+
+b {
+	font-weight: 600;
+}
+
+.menu {
+	width: 170px;
+	height: 270px;
+	background: #575b4e;
+	border-radius: 3px;
+	position: absolute;
+	top: 65px;
+	left: 30px;
+	transition: all 0.5s ease-in-out;
+	transform: translate3d(20px, 0, 0);
+}
+
+.menu.active {
+	box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
+	transform: translate3d(0, 0, 0);
+}
+
+.box {
+	padding: 10px 0;
+	margin: 0;
+
+	color: #a9b39c;
+	margin: 0;
+	list-style: none;
+	font-size: 14px !important;
+	line-height: 14px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.dashboard,
+.profile,
+.notif,
+.messages,
+.setting {
+	margin: 0px;
+	padding: 18px 17px;
+}
+
+.box i {
+	display: block;
+	float: left;
+	margin-right: 8px;
+}
+
+.box div:hover {
+	color: #1f2322;
+}
+
+.center.show-menu {
+	transform: translate3d(140px, 0, 0);
+	top: 50px;
+	left: 20px;
+	box-shadow: -10px 10px 15px 0 rgb(0 0 0 / 45%);
+}
+
