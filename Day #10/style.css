@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+@import url(https://100dayscss.com/codepen/css/font-awesome.min.css);
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: #333;
+	color: #fff;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	position: absolute;
+	width: 215px;
+	height: 215px;
+	top: 87px;
+	left: 87px;
+	background: #242424;
+	border: 7px solid #3a3a3a;
+	border-radius: 50%;
+	text-align: center;
+}
+
+
+
+.int {
+	position: absolute;
+	text-transform: uppercase;
+	line-height: 25px;
+	top: 67px;
+	left: 53px;
+}
+
+.date {
+	font-size: 12px;
+}
+
+.time {
+	font-weight: 700;
+	font-size: 40px;
+	margin: 4px 0;
+}
+
+.inf {
+	display: flex;
+}
+
+.beat {
+	font-size: 12px;
+	width: 40px;
+}
+.beat span {
+	color: #f85b5b;
+	font-size: 12px;
+	float: left;
+	margin-top: 7px;
+	margin-left: 4px;
+	-webkit-animation: beat 1.5s ease-in-out infinite;
+	animation: beat 1.5s ease-in-out infinite;
+}
+
+.energy {
+	font-size: 12px;
+	width: 66px;
+	float: right;
+}
+
+.spinner {
+	width: 210px;
+	height: 210px;
+	border-radius: 50%;
+	position: absolute;
+	top: 3px ;
+	left: 3px;
+}
+
+.spinner circle {
+	stroke: #f85b5b;
+	stroke-width: 3;
+	fill: none;
+  stroke-dasharray: 625;
+  -webkit-animation: spinner 5s linear infinite;
+          animation: spinner 5s linear infinite;
+  transform-origin: center center;
+  transform: rotate(-90deg);
+}
+@-webkit-keyframes spinner {
+  from {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50.001% {
+    transform: rotate(-90deg) scaleY(-1);
+  }
+  to {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+}
+
+@keyframes spinner {
+  from {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50.001% {
+    transform: rotate(-90deg) scaleY(-1);
+  }
+  to {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+}
+@-webkit-keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.2);
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.2);
+  }
+}
+
+.point {
+	position: absolute;
+  height: 188px;
+  width: 188px;
+  top: 15px;
+  left: 13px;
+  transform: rotate(0deg);
+}
+
+.point1, .point2, .point3, .point4, .point5, .point6, .point7, .point8, .point9, .point10, .point11, .point12    {
+	 position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 93px;
+  background: #d3d3d3;
+  border-radius: 50%;
+}
+
+.point3 {
+	top: 50%;
+	left: 186px;
+	width: 4px;
+  height: 4px;
+}
+
+.point6 {
+	top: 186px;
+	left: 50%;
+	width: 4px;
+  height: 4px;
+}
+
+.point9 {
+	top: 50%;
+	left: 0px;	
+	width: 4px;
+  height: 4px;
+}
+
+.point12 {
+	top: 0;
+  left: 50%;	
+	width: 4px;
+  height: 4px;
+}
+
+.point1 {
+    left: 50%;
+    transform-origin: center 92.5px;
+    transform: translate(-50%) rotate(30deg);
+}
+
+.point2 {
+    left: 50%;
+    transform-origin: center 92.5px;
+    transform: translate(-50%) rotate(60deg);
+}
+
+.point4 {
+    left: 50%;
+    transform-origin: center 92.5px;
+    transform: translate(-50%) rotate(120deg);
+}
+
+.point5 {
+    left: 50%;
+    transform-origin: center 92.5px;
+    transform: translate(-50%) rotate(150deg);
+}
+
+.point7 {
+    left: 50%;
+    transform-origin: center 92.5px;
+    transform: translate(-50%) rotate(210deg);
+}
+
+.point8 {
+    left: 50%;
+    transform-origin: center 92.5px;
+    transform: translate(-50%) rotate(240deg);
+}
+
+.point10 {
+    left: 50%;
+    transform-origin: center 92.5px;
+    transform: translate(-50%) rotate(300deg);
+}
+
+.point11 {
+    left: 50%;
+    transform-origin: center 92.5px;
+    transform: translate(-50%) rotate(330deg);
+}
+
