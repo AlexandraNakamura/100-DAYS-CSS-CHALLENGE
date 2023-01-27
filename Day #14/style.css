@@ -1,0 +1,352 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: #ff3a5e;
+	color: #333;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+	position: absolute;
+	width: 320px;
+	height: 180px;
+	top: 110px;
+	left: 40px;
+	perspective: 800px;
+}
+
+.flip {
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
+	perspective: 1000px;
+	box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.5);
+	background: #09090b;
+	border-radius: 10px;
+	border: 1px solid blue;
+}
+
+.card:hover .flip {
+	transform: rotatey(180deg) translate3d(0, 0, 0);
+	box-shadow: 8px -10px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.fa-bicycle {
+	font-size: 80px !important;
+	color: #00a3ff;
+	position: relative;
+	top: 60px;
+	transform-origin: 50% 100%;
+	animation: bike 0.6s ease-in-out infinite;
+	left: 110px;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.path {
+	position: absolute;
+	top: 127px;
+	left: 80px;
+	width: 160px;
+	height: 3px;
+	overflow: hidden;
+}
+
+.line1 {
+	position: absolute;
+	right: -25px;
+	top: 0;
+	height: 3px;
+	width: 4px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: street 1s linear 0.2s infinite;
+	animation: street 1s linear 0.2s infinite;
+}
+
+.line2 {
+	position: absolute;
+	right: -25px;
+	top: 0;
+	height: 3px;
+	width: 6px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: street 1s linear 0.8s infinite;
+	animation: street 1s linear 0.8s infinite;
+}
+
+.line3 {
+	position: absolute;
+	right: -25px;
+	top: 0;
+	height: 3px;
+	width: 8px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: street 1s linear 1.3s infinite;
+	animation: street 1s linear 1.3s infinite;
+}
+
+.line4 {
+	position: absolute;
+	right: -25px;
+	top: 0;
+	height: 3px;
+	width: 10px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: street 1s linear 0.1s infinite;
+	animation: street 1s linear 0.1s infinite;
+}
+
+.line5 {
+	position: absolute;
+	right: -25px;
+	top: 0;
+	height: 3px;
+	width: 12px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: street 1s linear 0.3s infinite;
+	animation: street 1s linear 0.3 infinite;
+}
+
+.line6 {
+	position: absolute;
+	right: -25px;
+	top: 0;
+	height: 3px;
+	width: 14px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: street 1s linear 1s infinite;
+	animation: street 1s linear 1s infinite;
+}
+
+.back {
+	transform: rotateX(180deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.fa-envira {
+	font-size: 80px !important;
+	color: #00a3ff;
+	position: relative;
+	top: 30px;
+	transform-origin: 50% 100%;
+	left: 120px;
+	-webkit-animation: helicopter 1.5s ease-in-out infinite;
+	animation: leaf 1.5s ease-in-out infinite;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.sky {
+	position: absolute;
+	top: 12px;
+	left: 80px;
+	bottom: 0;
+	width: 160px;
+	overflow: hidden;
+	height: 110px;
+}
+
+.sky1 {
+	position: absolute;
+	right: -25px;
+	top: 0px;
+	height: 3px;
+	width: 11.4px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: cloud 1.8s linear 1.6s infinite;
+	animation: cloud 1.8s linear 1.6s infinite;
+}
+
+.sky2 {
+	position: absolute;
+	right: -25px;
+	top: 14px;
+	height: 3px;
+	width: 21.3px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: cloud 1.8s linear 1.7s infinite;
+	animation: cloud 1.8s linear 1.7s infinite;
+}
+
+.sky3 {
+	position: absolute;
+	right: -25px;
+	top: 28px;
+	height: 3px;
+	width: 23.7px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: cloud 1.8s linear 1.3s infinite;
+	animation: cloud 1.8s linear 1.3s infinite;
+}
+
+.sky4 {
+	position: absolute;
+	right: -25px;
+	top: 32px;
+	height: 3px;
+	width: 21.8px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: cloud 1.7s linear 1.5s infinite;
+	animation: cloud 1.7s linear 1.5s infinite;
+}
+
+.sky5 {
+	position: absolute;
+	right: -25px;
+	top: 46px;
+	height: 3px;
+	width: 22.8px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: cloud 1.8s linear 1.1s infinite;
+	animation: cloud 1.8s linear 1.1s infinite;
+}
+
+.sky6 {
+	position: absolute;
+	right: -25px;
+	top: 60px;
+	height: 3px;
+	width: 10.5px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: cloud 1.7s linear 1.3s infinite;
+	animation: cloud 1.7s linear 1.3s infinite;
+}
+
+.sky7 {
+	position: absolute;
+	right: -25px;
+	top: 74px;
+	height: 3px;
+	width: 16.2px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: cloud 1.8s linear 2s infinite;
+	animation: cloud 1.8s linear 2s infinite;
+}
+
+.sky8 {
+	position: absolute;
+	right: -25px;
+	top: 88px;
+	height: 3px;
+	width: 19.3px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: cloud 1.7s linear 1.5s infinite;
+	animation: cloud 2.7s linear 1.5s infinite;
+}
+
+.sky9 {
+	position: absolute;
+	right: -25px;
+	top: 102px;
+	height: 3px;
+	width: 17.6px;
+	background: #00a3ff;
+	border-radius: 3px;
+	-webkit-animation: cloud 1.7s linear 1.5s infinite;
+	animation: cloud 1.7s linear 1.5s infinite;
+}
+
+@keyframes bike {
+
+	0%,
+	100% {
+		transform: scaleY(1);
+	}
+
+	50% {
+		transform: scaleY(1.1);
+	}
+}
+
+@-webkit-keyframes street {
+	0% {
+		transform: translate3d(0, 0, 0) scaleX(1);
+	}
+
+	100% {
+		transform: translate3d(-210px, 0, 0) scaleX(0.8);
+	}
+}
+
+@keyframes street {
+	0% {
+		transform: translate3d(0, 0, 0) scaleX(1);
+	}
+
+	100% {
+		transform: translate3d(-210px, 0, 0) scaleX(0.8);
+	}
+}
+
+@-webkit-keyframes leaf {
+	0%, 100% {
+		transform: translate3d(-25px, -5px, 0px);
+	}
+
+	50% {
+		transform: translate3d(10px, 5px, 25px);
+	}
+}
+
+@keyframes leaf {
+	0%, 100% {
+		transform: translate3d(-25px, -5px, 0px);
+	}
+
+	50% {
+		transform: translate3d(10px, 5px, 25px);
+	}
+}
+
+@-webkit-keyframes cloud {
+	0% {
+		transform: translate3d(0, 0, 0) scaleX(1);
+	}
+
+	100% {
+		transform: translate3d(-210px, 0, 0) scaleX(0.8);
+	}
+}
+
+@keyframes cloud {
+	0% {
+		transform: translate3d(0, 0, 0) scaleX(1);
+	}
+
+	100% {
+		transform: translate3d(-210px, 0, 0) scaleX(0.8);
+	}
+}
